@@ -1,24 +1,19 @@
-# Storefront Backend API
+# StoreFront Backend
 
-This project implements the backend API for an online storefront.  
-The API supports products, users, and orders, and uses secure JWT authentication for protected routes.
+## Setup
 
----
+### Install dependencies
+npm install
 
-##  Technologies Used
-- Node.js
-- Express.js
-- PostgreSQL
-- TypeScript
-- JWT Authentication
-- Bcrypt password hashing
+### Create PostgreSQL database
+CREATE DATABASE storefront;
 
----
+### Run migrations
+POSTGRES_HOST=127.0.0.1 \
+POSTGRES_DB=storefront \
+POSTGRES_USER=storefront \
+POSTGRES_PASSWORD=storefront \
+npm run migrate:up
 
-#  Project Setup
-
-## Clone the repository
-
-```bash
-git clone <your-repo-url>
-cd <project-folder>
+### Start server
+npm run start
